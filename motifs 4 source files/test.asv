@@ -1,0 +1,9 @@
+clear all; clc;
+addpath(genpath('C:\Users\max\Downloads\ComplexNetworksPackage.1.6.Win\Graph'));
+% a = [1 2; 1 3;4 1;3, 2;6,4;5,2];
+% Graph = ObjectCreateGraph(a);
+load four_nets;
+[r, c] = find(Graphs{1});
+Graph = ObjectCreateGraph([r, c]);
+[out1] = mex4motifs(Graph);
+out2= load('example.txt');
